@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.transition-default {
+    @apply transition delay-100 duration-200 ease-in-out;
+}
+
+.transition-all-default {
+    @apply transition-all delay-100 duration-200 ease-in-out;
+}
+
+.menu-mobile {
+    max-height: 0;
+    transition: max-height 1s ease-out;
+    overflow: hidden;
+    @apply opacity-0 transition-all delay-100 duration-200 ease-in-out;
+}
+
+.menu-mobile.show {
+    max-height: 5000px;
+    transition: max-height 1s ease-out;
+    @apply mt-8 opacity-100 transition-all delay-100 duration-200 ease-in-out;
+}
+
+.menu-list {
+    max-height: 0;
+    transition: max-height 0.15s ease-out;
+    overflow: hidden;
+}
+
+.menu-list.show {
+    max-height: 1000px;
+    transition: max-height 0.25s ease-in;
+    @apply mt-2.5;
+}
+
+.btn {
+    @apply px-6 py-3 rounded-lg shadow-md focus:outline-none focus:ring-4;
+}
+
+.active-chevron-down {
+    @apply -rotate-180 transition-default;
+}
+
+.FAQ-answer {
+    max-height: 0;
+    opacity: 0;
+    @apply pt-0 transition-all duration-200 ease-in-out;
+}
+
+.FAQ-answer.show {
+    max-height: 9999px;
+    opacity: 1;
+    @apply pt-4 transition-all duration-200 ease-in-out;
+}
+
+
+/* Footer */
+.title-list {
+    @apply mb-3 font-semibold text-lg;
+}
+
+.list {
+    @apply flex flex-col gap-2;
+}
+
+.item-list {
+    @apply font-light text-base;
+}
+
+.text-list {
+    @apply font-light text-base hover:text-primary hover:font-normal transition-default;
+}
